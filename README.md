@@ -1,70 +1,95 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Accordion FAQ App
 
-## Available Scripts
+This project is a simple **Accordion FAQ Application** built using React. It provides a user-friendly interface for frequently asked questions (FAQ), with smooth content visibility toggling.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Accordion Toggle**: Expand and collapse content for each question.
+- **Dynamic Button Icons**: Button changes between `+` and `-` based on the state.
+- **Responsive Design**: Adaptable across screen sizes.
+- **Modular Code**: Components are structured for maintainability.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+/src
+│
+├── App.jsx            # Main application component
+├── App.css            # Styling for the application
+├── App.test.js        # Test cases for the application
+├── Question.jsx       # Component for individual questions
+├── data.js            # Sample FAQ data for the application
+├── index.js           # Entry point for React DOM rendering
+├── index.css          # Global styles and variables
+```
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure the following tools are installed on your system:
 
-### `npm run build`
+- **Node.js** (v14+)
+- **npm** (v6+)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd <project-directory>
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Run the application:**
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. **App.jsx**
+The main component that renders the list of questions using the `Question` component.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. **Question.jsx**
+A reusable component managing the toggle state for each question.
 
-## Learn More
+### 3. **data.js**
+Contains an array of FAQ data, with each object containing:
+- `id`: Unique identifier.
+- `title`: Question title.
+- `info`: Content to display upon expansion.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Styling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **App.css**: Handles the layout and appearance.
+- **index.css**: Global CSS variables and additional styling for responsiveness.
 
-### Code Splitting
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Run tests with:
+  ```bash
+  npm test
+  ```
 
-### Analyzing the Bundle Size
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **`npm start`**: Start the app in development mode.
+- **`npm test`**: Run tests interactively.
+- **`npm run build`**: Build the app for production.
 
-### Making a Progressive Web App
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Add animations for smoother transitions.
+- Fetch FAQ data from an API for dynamic content.
+- Improve accessibility by adding `aria-*` attributes.
 
-### Advanced Configuration
+## Output
+<img width="1464" alt="Screenshot 2024-10-23 at 4 36 36 PM" src="https://github.com/user-attachments/assets/4c8bdaf8-21ec-4913-adbf-fa8ebe036932">
+<img width="1464" alt="Screenshot 2024-10-23 at 4 37 24 PM" src="https://github.com/user-attachments/assets/c9fc578a-60ca-4fd5-80e6-308e9fdce663">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
